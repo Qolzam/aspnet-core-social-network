@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-Green.Web-42ADAEFA-BBD2-4D0D-AE7B-84C946D04EBC</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Users\" />
+    <Folder Include="Models\Circles\" />
+    <Folder Include="Models\Comments\" />
+    <Folder Include="Models\ImageGallery\" />
+    <Folder Include="Models\Notifies\" />
+    <Folder Include="Models\Posts\" />
+    <Folder Include="Models\Votes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0-preview2-final" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0-preview2-final" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0-preview2-final" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.0.0-preview2-final" />
+  </ItemGroup>
+
+  <ItemGroup>
+  <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0-preview2-final" />
+</ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Green.Core\Green.Core.csproj" />
+    <ProjectReference Include="..\..\Libraries\Green.Services\Green.Services.csproj" />
+    <ProjectReference Include="..\Green.Web.Framework\Green.Web.Framework.csproj" />
+    <ProjectReference Include="..\..\Libraries\Green.Data\Green.Data.csproj" />
+  </ItemGroup>
+</Project>

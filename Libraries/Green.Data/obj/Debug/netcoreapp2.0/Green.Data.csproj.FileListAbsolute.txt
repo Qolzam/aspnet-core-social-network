@@ -1,0 +1,12 @@
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/bin/Debug/netcoreapp2.0/libe_sqlite3.dylib
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/bin/Debug/netcoreapp2.0/Green.Data.deps.json
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/bin/Debug/netcoreapp2.0/Green.Data.dll
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/bin/Debug/netcoreapp2.0/Green.Data.pdb
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/bin/Debug/netcoreapp2.0/Green.Core.dll
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/bin/Debug/netcoreapp2.0/Green.Core.pdb
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/obj/Debug/netcoreapp2.0/Green.Data.csprojResolveAssemblyReference.cache
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/obj/Debug/netcoreapp2.0/Green.Data.csproj.CoreCompileInputs.cache
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/obj/Debug/netcoreapp2.0/Green.Data.AssemblyInfoInputs.cache
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/obj/Debug/netcoreapp2.0/Green.Data.AssemblyInfo.cs
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/obj/Debug/netcoreapp2.0/Green.Data.dll
+/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/obj/Debug/netcoreapp2.0/Green.Data.pdb

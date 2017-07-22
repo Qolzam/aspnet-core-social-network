@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{F2A6CC80-69EA-4900-B6BE-14CEC019A30C}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.ItemProperties.Presentation.Green.Web PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Libraries/Green.Data/GreenObjectContext.cs">
+    <Files>
+      <File FileName="Presentation/Green.Web.Framework/Infrastracture/DependencyRegistrar.cs" Line="45" Column="28" />
+      <File FileName="Presentation/Green.Web/Program.cs" Line="18" Column="47" />
+      <File FileName="Presentation/Green.Web/Startup.cs" Line="41" Column="30" />
+      <File FileName="Presentation/Green.Web/appsettings.Development.json" Line="14" Column="1" />
+      <File FileName="Presentation/Green.Web/Properties/launchSettings.json" Line="17" Column="8" />
+      <File FileName="Libraries/Green.Data/MigrationGreenDbContextFactory.cs" Line="14" Column="1" />
+      <File FileName="Libraries/Green.Data/GreenObjectContext.cs" Line="35" Column="4" />
+      <File FileName="Presentation/Green.Web.Framework/Infrastracture/GreenCommonStartup.cs" Line="29" Column="20" />
+      <File FileName="Libraries/Green.Data/EfRepository.cs" Line="1" Column="1" />
+      <File FileName="Presentation/Green.Web.Framework/Infrastracture/GreenMvcStartup.cs" Line="1" Column="1" />
+      <File FileName="Libraries/Green.Data/DataReaderExtensions.cs" Line="1" Column="1" />
+      <File FileName="Libraries/Green.Core/Infrastructure/ITypeFinder.cs" Line="24" Column="1" />
+      <File FileName="Libraries/Green.Core/Infrastructure/WebAppTypeFinder.cs" Line="1" Column="1" />
+      <File FileName="Presentation/Green.Web/Controllers/UserController.cs" Line="38" Column="13" />
+      <File FileName="Libraries/Green.Core/Infrastructure/AppDomainTypeFinder.cs" Line="237" Column="54" />
+      <File FileName="Libraries/Green.Core/Infrastructure/EngineContext.cs" Line="1" Column="1" />
+      <File FileName="Libraries/Green.Core/Infrastructure/GreenEngine.cs" Line="126" Column="10" />
+      <File FileName="Presentation/Green.Web.Framework/Infrastracture/Extensions/ApplicationBuilderExtensions.cs" Line="1" Column="2" />
+      <File FileName="Presentation/Green.Web.Framework/Infrastracture/Extensions/ServiceCollectionExtensions.cs" Line="1" Column="2" />
+      <File FileName="Libraries/Green.Core/WebHelper.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/Test.cs" relfile="Libraries/Green.Data/Test.cs" line="37" column="1" />
+      <Breakpoint file="/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Data/Test.cs" relfile="Libraries/Green.Data/Test.cs" line="32" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

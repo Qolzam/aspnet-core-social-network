@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Users\" />
+    <Folder Include="Circles\" />
+    <Folder Include="Comments\" />
+    <Folder Include="ImageGallery\" />
+    <Folder Include="Notifies\" />
+    <Folder Include="Posts\" />
+    <Folder Include="Votes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Green.Core\Green.Core.csproj" />
+    <ProjectReference Include="..\Green.Data\Green.Data.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Domain\" />
+    <Folder Include="Domain\Users\" />
+    <Folder Include="Data\" />
+    <Folder Include="Domain\ImageGallery\" />
+    <Folder Include="Domain\Posts\" />
+    <Folder Include="Domain\Notifies\" />
+    <Folder Include="Domain\Circles\" />
+    <Folder Include="Domain\Votes\" />
+    <Folder Include="Domain\Comments\" />
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="Green.Services\Class1.cs" />
+    <Compile Remove="Green.Services\obj\Debug\netcoreapp2.0\Green.Services.AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Green.Services\bin\Debug\netcoreapp2.0\Green.Services.deps.json" />
+    <None Remove="Green.Services\bin\Debug\netcoreapp2.0\Green.Services.dll" />
+    <None Remove="Green.Services\bin\Debug\netcoreapp2.0\Green.Services.pdb" />
+    <None Remove="Green.Services\obj\Green.Services.csproj.nuget.g.props" />
+    <None Remove="Green.Services\obj\Green.Services.csproj.nuget.g.targets" />
+    <None Remove="Green.Services\obj\project.assets.json" />
+    <None Remove="Green.Services\obj\Debug\netcoreapp2.0\Green.Services.AssemblyInfoInputs.cache" />
+    <None Remove="Green.Services\obj\Debug\netcoreapp2.0\Green.Services.csproj.CoreCompileInputs.cache" />
+    <None Remove="Green.Services\obj\Debug\netcoreapp2.0\Green.Services.csproj.FileListAbsolute.txt" />
+    <None Remove="Green.Services\obj\Debug\netcoreapp2.0\Green.Services.csprojResolveAssemblyReference.cache" />
+    <None Remove="Green.Services\obj\Debug\netcoreapp2.0\Green.Services.dll" />
+    <None Remove="Green.Services\obj\Debug\netcoreapp2.0\Green.Services.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.0.0-preview2-final" />
+    <PackageReference Include="Autofac" Version="4.6.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.0-preview2-final" />
+  </ItemGroup>
+</Project>

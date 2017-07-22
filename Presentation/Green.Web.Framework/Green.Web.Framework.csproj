@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Green.Core\Green.Core.csproj" />
+    <ProjectReference Include="..\..\Libraries\Green.Services\Green.Services.csproj" />
+    <ProjectReference Include="..\..\Libraries\Green.Data\Green.Data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infrastracture\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+</Project>
