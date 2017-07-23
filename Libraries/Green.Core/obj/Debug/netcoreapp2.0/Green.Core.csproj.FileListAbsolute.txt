@@ -1,9 +1,0 @@
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Core/bin/Debug/netcoreapp2.0/Green.Core.deps.json
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Core/bin/Debug/netcoreapp2.0/Green.Core.dll
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Core/bin/Debug/netcoreapp2.0/Green.Core.pdb
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Core/obj/Debug/netcoreapp2.0/Green.Core.csprojResolveAssemblyReference.cache
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Core/obj/Debug/netcoreapp2.0/Green.Core.csproj.CoreCompileInputs.cache
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Core/obj/Debug/netcoreapp2.0/Green.Core.AssemblyInfoInputs.cache
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Core/obj/Debug/netcoreapp2.0/Green.Core.AssemblyInfo.cs
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Core/obj/Debug/netcoreapp2.0/Green.Core.dll
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Core/obj/Debug/netcoreapp2.0/Green.Core.pdb

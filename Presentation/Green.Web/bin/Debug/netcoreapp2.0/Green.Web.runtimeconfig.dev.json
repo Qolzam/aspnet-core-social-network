@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/Users/Qolzam/.dotnet/store/|arch|/|tfm|",
-      "/Users/Qolzam/.nuget/packages"
-    ]
-  }
-}
