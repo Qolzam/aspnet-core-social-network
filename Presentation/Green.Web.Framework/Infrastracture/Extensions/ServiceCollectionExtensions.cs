@@ -135,7 +135,7 @@ namespace Green.Web.Framework.Infrastructure.Extensions
 			var mvcBuilder = services.AddMvc();
 
 			//MVC now serializes JSON with camel case names by default, use this code to avoid it
-			mvcBuilder.AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+			//mvcBuilder.AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
 
 

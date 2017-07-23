@@ -7,6 +7,7 @@ using Green.Services.Security;
 using Green.Services.Users;
 using Green.Web.Framework.Helpers;
 using Green.Web.Models.Users;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -59,21 +60,22 @@ namespace Green.Web.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromForm]LoginModel loginModel)
         {
-            if (string.IsNullOrEmpty(loginModel.UserName))
+            if (string.IsNullOrEmpty(loginModel.Email))
             {
-                ModelState.AddModelError(nameof(loginModel), "User name can't be null or empty.");
+                ModelState.AddModelError("errors", "Email address can't be null or empty.");
             }
 
             if (string.IsNullOrEmpty(loginModel.Password))
 			{
-				ModelState.AddModelError(nameof(loginModel), "Password can't be null or empty.");
+				ModelState.AddModelError("errors", "Password can't be null or empty.");
 			}
 
 
-           var user = _userService.GetUserByEmail(loginModel.UserName);
+           var user = _userService.GetUserByEmail(loginModel.Email);
+
             if (user == null)
             {
-                ModelState.AddModelError(nameof(loginModel),"User name or password is wrong.");
+                ModelState.AddModelError("errors","Email address or password is wrong.");
             }
 
 			if (!ModelState.IsValid)
@@ -86,12 +88,24 @@ namespace Green.Web.Controllers
             string encryptedPassword = _encryptionService.EncryptText(loginModel.Password);
 
             if(!encryptedPassword.Equals(user.Password)){
-				return Unauthorized();
+
+                return StatusCode(StatusCodes.Status401Unauthorized, new { errors = new string[] { "Email address or password is wrong." } });
             }
 
+            if(!user.Active)
+            {
+                return StatusCode(StatusCodes.Status401Unauthorized, new { errors = new string[] { $"{user.Email} user is inactive." } });
+
+			}
+
+			if (user.Deleted)
+			{
+				return StatusCode(StatusCodes.Status401Unauthorized, new { errors = new string[] { $"{user.Email} user has been deleted." } });
+
+			}
             _authService.SignIn(user,loginModel.IsPersistent);
 
-			return Ok(user);
+            return Ok(new LoginResponseModel { Email = user.Email, FullName = user.FullName, Key = user.Key, TagLine = user.TagLine});
 
 		}
 
@@ -107,34 +121,35 @@ namespace Green.Web.Controllers
 
             if(string.IsNullOrEmpty(userModel.FullName))
             {
-                ModelState.AddModelError(nameof(userModel),"Full name can't be null or empty.");
+                ModelState.AddModelError("errors","Full name can't be null or empty.");
             }
 
 			if (string.IsNullOrEmpty(userModel.Email))
 			{
-				ModelState.AddModelError(nameof(userModel), "Email can't be null or empty.");
+				ModelState.AddModelError("errors", "Email can't be null or empty.");
             }
             else if(_userService.EmailExist(userModel.Email))
             {
-                ModelState.AddModelError(nameof(userModel), "Email exist.");
+                ModelState.AddModelError("errors", "Email exist.");
             }
 
 
 
             if (string.IsNullOrEmpty(userModel.Password))
 			{
-				ModelState.AddModelError(nameof(userModel), "Password can't be null or empty.");
+				ModelState.AddModelError("errors", "Password can't be null or empty.");
+			}
+			else if (!userModel.Password.Equals(userModel.ConfirmPassword))
+			{
+				ModelState.AddModelError("errors", "Password and confirm password should be equal.");
 			}
 
             if (string.IsNullOrEmpty(userModel.ConfirmPassword))
 			{
-				ModelState.AddModelError(nameof(userModel), "Confirm password can't be null or empty.");
+				ModelState.AddModelError("errors", "Confirm password can't be null or empty.");
 			}
 
-            if (!userModel.Password.Equals(userModel.ConfirmPassword))
-			{
-				ModelState.AddModelError(nameof(userModel), "Password and confirm password should be equal.");
-			}
+
 
 			if (!ModelState.IsValid)
 			{
@@ -184,8 +199,8 @@ namespace Green.Web.Controllers
             }
             catch (Exception)
             {
-                return Unauthorized();
-            }
+                return StatusCode(StatusCodes.Status403Forbidden, new { errors = new string[] { "User is not authorized to logout." } });
+			}
 
 
             _authService.SignOut();
@@ -195,7 +210,7 @@ namespace Green.Web.Controllers
 
 
         [HttpPut("password")]
-        public IActionResult Password([FromForm] UpdatePasswordModel passwordModel)
+        public IActionResult Password([FromForm]UpdatePasswordModel passwordModel)
         {
             User user = null;
 
@@ -209,22 +224,21 @@ namespace Green.Web.Controllers
             }
 			catch (Exception)
 			{
-				return Unauthorized();
+				return StatusCode(StatusCodes.Status403Forbidden, new { errors = new string[] { "User is not authorized to logout." } });
 			}
 
             if (string.IsNullOrEmpty(passwordModel.NewPassword))
             {
-                ModelState.AddModelError(nameof(passwordModel),"New password can't be null or empty.");
+                ModelState.AddModelError("errors","New password can't be null or empty.");
             }
 
             if (string.IsNullOrEmpty(passwordModel.ConfirmPassword))
 			{
-				ModelState.AddModelError(nameof(passwordModel), "Confirm password can't be null or empty.");
+				ModelState.AddModelError("errors", "Confirm password can't be null or empty.");
 			}
-
-            if (!passwordModel.NewPassword.Equals(passwordModel.ConfirmPassword))
+             else if (!string.IsNullOrEmpty(passwordModel.NewPassword) && !passwordModel.NewPassword.Equals(passwordModel.ConfirmPassword))
             {
-				ModelState.AddModelError(nameof(passwordModel), "New password and confirm password should be equal.");
+				ModelState.AddModelError("errors", "New password and confirm password should be equal.");
             }
 
 			if (!ModelState.IsValid)

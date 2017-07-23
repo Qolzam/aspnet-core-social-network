@@ -1,0 +1,3 @@
+# Green.Services
+
+This layer works as a bridge between Presentation Layer and data access layer `(Green.Data)`. All the user values received from the presentation layer are being passed to `Services`. The results received from the `Data` are in row data in Data Table format but in `Services` it’s converting into `Object Class`. `Green.Services` is the most important class in the whole architecture because it mainly contains all the business logic of the program. Whenever a user wants to update the business logic of the program only need to update this class library.

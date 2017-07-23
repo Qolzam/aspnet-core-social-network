@@ -13,4 +13,3 @@
 /Users/Qolzam/projects/aspnet/GreenSocialNetwork/Presentation/Green.Web.Framework/obj/Debug/netcoreapp2.0/Green.Web.Framework.AssemblyInfo.cs
 /Users/Qolzam/projects/aspnet/GreenSocialNetwork/Presentation/Green.Web.Framework/obj/Debug/netcoreapp2.0/Green.Web.Framework.dll
 /Users/Qolzam/projects/aspnet/GreenSocialNetwork/Presentation/Green.Web.Framework/obj/Debug/netcoreapp2.0/Green.Web.Framework.pdb
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Presentation/Green.Web.Framework/bin/Debug/netcoreapp2.0/libe_sqlite3.dylib

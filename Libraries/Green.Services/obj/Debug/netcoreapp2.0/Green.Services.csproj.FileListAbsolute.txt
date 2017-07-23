@@ -11,4 +11,3 @@
 /Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Services/obj/Debug/netcoreapp2.0/Green.Services.AssemblyInfo.cs
 /Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Services/obj/Debug/netcoreapp2.0/Green.Services.dll
 /Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Services/obj/Debug/netcoreapp2.0/Green.Services.pdb
-/Users/Qolzam/projects/aspnet/GreenSocialNetwork/Libraries/Green.Services/bin/Debug/netcoreapp2.0/libe_sqlite3.dylib

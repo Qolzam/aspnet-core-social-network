@@ -1,0 +1,3 @@
+# Presentation
+
+Presentation Layer is the only layer which is directly connected with the user. So in this matter, it’s also a really important layer for marketing purposes. Presentation Layer is mainly used for getting user data and then passing it to `Services` layer for further procedure, and when data is received in `Domain` then it’s responsible to represent `Model` in the appropriate form which user can understand.

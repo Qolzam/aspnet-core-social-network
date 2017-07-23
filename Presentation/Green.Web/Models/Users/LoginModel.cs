@@ -7,7 +7,7 @@ namespace Green.Web.Models.Users
         /// Gets or sets the name of the user.
         /// </summary>
         /// <value>The name of the user.</value>
-       public string UserName
+       public string Email
         {
             get;
             set;
