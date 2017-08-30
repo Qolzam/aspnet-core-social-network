@@ -18,6 +18,7 @@ using Green.Core.Data;
 using Green.Services.Authentication;
 using Green.Services.Installation;
 using Green.Services.Security;
+using Green.Services.Circles;
 
 namespace Green.Web.Framework.Infrastructure
 {
@@ -50,6 +51,8 @@ namespace Green.Web.Framework.Infrastructure
 
 			//app services
 			builder.RegisterType<UserService>().As<IUserService>().InstancePerLifetimeScope();
+			builder.RegisterType<CircleService>().As<ICircleService>().InstancePerLifetimeScope();
+            builder.RegisterType<UserCircleService>().As<IUserCircleService>().InstancePerLifetimeScope();
 			builder.RegisterType<InstallationService>().As<IInstallationService>().InstancePerLifetimeScope();
 
 

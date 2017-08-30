@@ -6,7 +6,7 @@ using Green.Core.Domain.Circles;
 
 namespace Green.Services.Circles
 {
-    public class UserCircleService
+    public class UserCircleService: IUserCircleService
     {
 		#region Fields
 

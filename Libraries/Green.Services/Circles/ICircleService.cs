@@ -33,13 +33,6 @@ namespace Green.Services.Circles
 		Circle GetCircleByGuid(Guid circleGuid);
 
 		/// <summary>
-		/// Gets the circle by email.
-		/// </summary>
-		/// <returns>The circle by email.</returns>
-		/// <param name="email">Email.</param>
-		Circle GetCircleByEmail(string email);
-
-		/// <summary>
 		/// Updates the circle.
 		/// </summary>
 		/// <param name="circle">Circle.</param>
