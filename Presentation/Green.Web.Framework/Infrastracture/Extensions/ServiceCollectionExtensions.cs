@@ -84,7 +84,13 @@ namespace Green.Web.Framework.Infrastructure.Extensions
             //override cookie name
             services.AddAntiforgery(options =>
             {
-                options.CookieName = ".Green.Antiforgery";
+                options.Cookie = new CookieBuilder()
+                {
+                    Name = ".Green.Antiforgery"
+
+                };
+
+
             });
         }
 
@@ -96,8 +102,12 @@ namespace Green.Web.Framework.Infrastructure.Extensions
         {
             services.AddSession(options =>
             {
-                options.CookieName = ".Green.Session";
-                options.CookieHttpOnly = true;
+                options.Cookie = new CookieBuilder()
+                {
+                    Name=".Green.Session",
+                    HttpOnly = true
+                        
+                };
             });
         }
 
@@ -110,18 +120,24 @@ namespace Green.Web.Framework.Infrastructure.Extensions
         {
 			services.AddAuthentication(options =>
 			{
-				options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-				options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-				options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 
 			});
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                    .AddCookie(options => {
+                        options.AccessDeniedPath = GreenCookieAuthenticationDefaults.AccessDeniedPath;
+                        options.LoginPath = GreenCookieAuthenticationDefaults.LoginPath;
+                        options.Cookie = new CookieBuilder()
+                        {
+                            HttpOnly = true,
+                            Name = GreenCookieAuthenticationDefaults.CookiePrefix + CookieAuthenticationDefaults.AuthenticationScheme,
 
-			services.AddCookieAuthentication(c => {
-				c.CookieName = GreenCookieAuthenticationDefaults.CookiePrefix + GreenCookieAuthenticationDefaults.AuthenticationScheme;
-				c.LoginPath = GreenCookieAuthenticationDefaults.LoginPath;
-				c.AccessDeniedPath = GreenCookieAuthenticationDefaults.AccessDeniedPath;
-				c.CookieHttpOnly = false;
-			});
+                        };
+
+		 });
+
         }
 
 		/// <summary>
